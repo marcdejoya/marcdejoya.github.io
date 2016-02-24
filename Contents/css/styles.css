@@ -1,3 +1,4 @@
+/* Globals */
 @font-face {
     font-family: abel;
     src: url("abel.regular.ttf");
@@ -5,15 +6,41 @@
 
 /* default for 320x480 devices */
 body{
-	padding:0;margin:0;font-family: Arial, Tahoma, Verdana;font-size: 14px;
+	padding:0;margin:0;font-family: Tahoma, Verdana;font-size: 14px;
 }
+
+.navigator {
+    position: absolute;bottom: 20px;right: 20px;padding: 10px;
+    background-color: #467F4F;opacity: .8;border: 1px solid #3A473C;
+    border-radius: 10px;cursor: pointer;
+}
+
+a[id= "intro"]:target {
+    -webkit-transform: translateY( 0px);
+    transform: translateY( 0px );
+}
+
+a[id= "about"]:target {
+    -webkit-transform: translateY(100vh);
+    transform: translateY(100vh);
+}
+
+.bolditalic{
+	font-style:italic;font-weight: bold;
+}
+
+.padded{
+	padding:10px;
+}
+
+/* Intro Page */
 
 .intro {
 	background-color: #70CC7E;height:100vh;
 }
 
 .intropic{
-	width:100%;padding-top:20vh;padding-bottom:10px;
+	width:100%;padding-top:8vh;padding-bottom:10px;
 }
 
 .introname{
@@ -21,7 +48,11 @@ body{
 }
 
 .introquote{
-    color: #004800;font-style: italic;text-align: center;
+    color: #004800;font-style: italic;text-align: center;padding-bottom:5px;
+}
+
+.introsummary{
+
 }
 
 .intropic-img{
@@ -32,8 +63,21 @@ body{
 	font-style: italic;font-size: 16px;color:#D8FFDE;
 }
 
+/* End Intro Page */
+
+/* About Page */
+
+.about {
+	background-color: #D8FFDE;height:100vh;
+}
+
+/* End About Page */
+
 @media screen and (min-width:800px)
 {
+	.intropic{
+		padding-top:20vh;
+	}
 	.intropic-img {
 		width:300px;
 	}
